@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AppNavbar > renders correctly 1`] = `
+"<nav data-v-2694e7c3=\\"\\" class=\\"navbar bg-black border-gray-200 mb-12\\">
+  <div data-v-2694e7c3=\\"\\" class=\\"flex flex-wrap items-center justify-between mx-auto py-4\\"><a data-v-2694e7c3=\\"\\" class=\\"flex items-center\\"><span data-v-2694e7c3=\\"\\" class=\\"self-center text-2xl font-semibold text-white\\">App</span></a>
+    <ul data-v-2694e7c3=\\"\\" class=\\"font-medium flex rounded-lg bg-black flex-row md:space-x-8 rtl:space-x-reverse mt-0 border-0 border-gray-700\\">
+      <li data-v-2694e7c3=\\"\\" class=\\"navbar__item\\"><a data-v-2694e7c3=\\"\\" href=\\"/\\" class=\\"router-link-active router-link-exact-active navbar__link rounded md:bg-transparent md:p-0 px-3 text-white\\" aria-current=\\"page\\">Home</a></li>
+      <li data-v-2694e7c3=\\"\\" class=\\"navbar__item\\"><a data-v-2694e7c3=\\"\\" href=\\"/units\\" class=\\"navbar__link rounded md:bg-transparent md:p-0 px-3 text-white\\">Units</a></li>
+      <!--v-if-->
+      <!--v-if-->
+    </ul>
+  </div>
+</nav>"
+`;

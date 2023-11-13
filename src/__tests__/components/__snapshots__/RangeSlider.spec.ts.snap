@@ -1,0 +1,6 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`RangeSlider > renders correctly 1`] = `
+"<div class=\\"flex items-center\\"><label class=\\"text-sm font-medium text-white mr-2\\"></label><input type=\\"range\\" min=\\"0\\" max=\\"200\\" class=\\"w-full h-2 rounded-lg appearance-none cursor-pointer bg-gray-700\\"></div>
+<!--v-if-->"
+`;

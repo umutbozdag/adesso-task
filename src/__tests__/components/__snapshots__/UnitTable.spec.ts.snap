@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`UnitTable > renders correctly 1`] = `
+"<div data-v-b7cca949=\\"\\" class=\\"unit-table relative py-8\\">
+  <div data-v-b7cca949=\\"\\" class=\\"unit-table__wrapper overflow-y-auto\\">
+    <table data-v-b7cca949=\\"\\" class=\\"text-sm text-left text-gray-500 w-full table-auto\\">
+      <thead data-v-b7cca949=\\"\\" class=\\"text-xs uppercase bg-gray-900 text-gray-200 sticky top-0\\">
+        <tr data-v-b7cca949=\\"\\">
+          <th data-v-b7cca949=\\"\\" class=\\"px-6 py-3\\">ID</th>
+          <th data-v-b7cca949=\\"\\" class=\\"px-6 py-3\\">Name</th>
+          <th data-v-b7cca949=\\"\\" class=\\"px-6 py-3\\">Age</th>
+          <th data-v-b7cca949=\\"\\" class=\\"px-6 py-3\\">Costs</th>
+        </tr>
+      </thead>
+      <tbody data-v-b7cca949=\\"\\" class=\\"unit-table__rows h-96\\">
+        <tr data-v-b7cca949=\\"\\" class=\\"border-b bg-gray-800 border-gray-700 text-gray-300 cursor-pointer hover:bg-gray-700 table__row--even\\">
+          <!-- TODO: get 'id' from header and render based on that -->
+          <!-- OR -->
+          <!-- TODO: use 'label' props to pass data and use a slot for more advanced things (rendering costs array) -->
+          <td scope=\\"row\\" class=\\"px-6 py-4 font-medium whitespace-nowrap\\">1</td>
+          <td class=\\"px-6 py-4\\">Archer</td>
+          <td class=\\"px-6 py-4\\">Dark</td>
+          <td class=\\"px-6 py-4\\"><span>Wood: 25, </span><span>Gold: 45<!--v-if--></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>"
+`;

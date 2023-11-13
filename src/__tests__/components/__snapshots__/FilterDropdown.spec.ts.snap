@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FilterDropdown > renders correctly 1`] = `
+"<div class=\\"z-10 inline-block\\"><button class=\\"justify-center w-full px-4 py-2 text-sm font-medium text-white bg-gray-900 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500\\">Ages: All</button>
+  <!--v-if-->
+</div>"
+`;

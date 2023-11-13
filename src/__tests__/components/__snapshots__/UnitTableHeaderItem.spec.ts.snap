@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`UnitTableFilters > renders correctly 1`] = `"<th class=\\"px-6 py-3\\">ID</th>"`;
