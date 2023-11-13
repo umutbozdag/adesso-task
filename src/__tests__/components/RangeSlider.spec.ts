@@ -1,8 +1,5 @@
-import FilterDropdown from '@/components/FilterDropdown.vue';
 import RangeSlider from '@/components/RangeSlider.vue';
-import { UnitAgeEnum } from '@/types/Unit';
 import { VueWrapper, mount } from '@vue/test-utils';
-import { OnClickOutside } from '@vueuse/components';
 import { expect, it, describe, beforeAll } from 'vitest';
 import { ComponentPublicInstance } from 'vue';
 
