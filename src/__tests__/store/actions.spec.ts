@@ -153,6 +153,7 @@ describe('Vuex Actions', () => {
   });
 
   it('FILTER_BY_COST action should set filtered units in the state', () => {
+    state.costsFilters.food.selected = true;
     const filterByCostState = {
       ...state,
       units: {
@@ -165,9 +166,6 @@ describe('Vuex Actions', () => {
       selectedOption: UnitAgeEnum.Dark
     };
 
-    // const getters = {
-    //   [GetterTypes.CURRENT_UNITS_DATA]: () => mockedUnits
-    // };
     createStore({
       state: filterByCostState,
       actions,
@@ -188,6 +186,42 @@ describe('Vuex Actions', () => {
     );
 
     expect(dispatch).toHaveBeenCalledOnce();
+  });
+
+  it('FILTER_BY_COST action should set filtered with empty array', () => {
+    state.costsFilters.food.selected = false;
+    const filterByCostState = {
+      ...state,
+      units: {
+        All: mockedUnits,
+        Castle: null,
+        Dark: mockedUnits,
+        Feudal: null,
+        Imperial: null
+      },
+      selectedOption: UnitAgeEnum.Dark
+    };
+
+    createStore({
+      state: filterByCostState,
+      actions,
+      mutations,
+      getters
+    });
+
+    actions[ActionTypes.FILTER_BY_COST](
+      {
+        state: filterByCostState,
+        commit,
+        dispatch,
+        getters,
+        rootGetters: getters,
+        rootState: filterByCostState
+      },
+      state.costsFilters
+    );
+
+    expect(dispatch).toHaveBeenCalledWith(ActionTypes.SET_FILTERED_UNITS, []);
   });
 
   it('FETCH_UNIT_BY_ID action should set unit detail correctly', () => {
