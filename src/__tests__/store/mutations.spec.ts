@@ -18,7 +18,7 @@ describe('Vuex Mutations', () => {
   });
 
   it('SET_SELECTED_OPTION mutation sets selectedOption correctly', () => {
-    const option = 'exampleOption';
+    const option = UnitAgeEnum.Castle;
     store.commit(MutationTypes.SET_SELECTED_OPTION, option);
     expect(store.state.selectedOption).toBe(option);
   });
