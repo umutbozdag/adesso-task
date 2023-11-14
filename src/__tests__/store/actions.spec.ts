@@ -9,7 +9,6 @@ import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { generateArrayOfUnits } from '../mocks/unit.mocks';
 import mutations from '@/store/mutations';
 import getters from '@/store/getters';
-import { GetterTypes } from '@/types/store/Getters';
 
 const mockedUnits = generateArrayOfUnits(1);
 
