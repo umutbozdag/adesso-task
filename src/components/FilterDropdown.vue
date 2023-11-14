@@ -40,7 +40,7 @@ interface IFilterDropdownProps {
 defineProps<IFilterDropdownProps>();
 
 const emit = defineEmits<{
-  (event: FilterDropdownEmitEnum.OPTION_SELECTED, option: FilterDropdownOption): void;
+  (event: 'option-selected', option: FilterDropdownOption): void;
 }>();
 
 const isOpen = ref(false);

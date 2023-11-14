@@ -4,9 +4,6 @@
     :class="[rowIndex % 2 === 0 ? 'table__row--even' : '']"
     @click="handleRowClick"
   >
-    <!-- TODO: get 'id' from header and render based on that -->
-    <!-- OR -->
-    <!-- TODO: use 'label' props to pass data and use a slot for more advanced things (rendering costs array) -->
     <td scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
       {{ unitDetail.id }}
     </td>
@@ -33,12 +30,12 @@ interface UnitTableRowItemProps {
 }
 
 const emit = defineEmits<{
-  (e: 'row-click', unit: IUnitDTO): void;
+  (e: 'row-clicked', unit: IUnitDTO): void;
 }>();
 
 const props = defineProps<UnitTableRowItemProps>();
 
 const handleRowClick = () => {
-  emit('row-click', props.unitDetail);
+  emit('row-clicked', props.unitDetail);
 };
 </script>
