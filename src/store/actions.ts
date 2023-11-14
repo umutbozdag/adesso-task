@@ -47,13 +47,21 @@ const actions: ActionTree<RootState, RootState> & Actions = {
     }
   },
   [ActionTypes.FILTER_BY_COST]({ state, dispatch }, costsFilters) {
-    const currentUnitsData = state.units[state.selectedOption] as IUnitDTO[];
+    const isAllUnselected = Object.keys(costsFilters).every(
+      (key) => !costsFilters[key as CostFilterEnum].selected
+    );
+    // If all filters unselected at that moment, just reset filtered units
+    if (isAllUnselected) {
+      dispatch(ActionTypes.SET_FILTERED_UNITS, []);
+      return;
+    }
 
+    const currentUnitsData = state.units[state.selectedOption] as IUnitDTO[];
     const costsUnitsData = currentUnitsData.filter(
       (unit: IUnitDTO) => unit.costs && unit.costs.length
     );
 
-    const costFilters = [
+    const filters = [
       {
         name: CostFilterEnum.FOOD,
         prop: 'Food'
@@ -71,7 +79,7 @@ const actions: ActionTree<RootState, RootState> & Actions = {
     const currentFilteredData = costsUnitsData.filter((unit) => {
       const filterConditions: boolean[] = [];
 
-      costFilters.forEach((filter) => {
+      filters.forEach((filter) => {
         filterByCost(filter.prop, costsFilters[filter.name], unit, filterConditions);
       });
 
