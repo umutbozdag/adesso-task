@@ -11,7 +11,6 @@ import filterByCost from '@/utils/filterByCost';
 const actions: ActionTree<RootState, RootState> & Actions = {
   async [ActionTypes.FETCH_UNITS]({ commit }) {
     try {
-      // TODO: try to get from src/data
       const response: Response = await fetch(
         `${import.meta.env.VITE_LOCALHOST_URL}/age-of-empires-units.json`
       );

@@ -165,9 +165,9 @@ describe('Vuex Actions', () => {
       selectedOption: UnitAgeEnum.Dark
     };
 
-    const getters = {
-      [GetterTypes.CURRENT_UNITS_DATA]: () => mockedUnits
-    };
+    // const getters = {
+    //   [GetterTypes.CURRENT_UNITS_DATA]: () => mockedUnits
+    // };
     createStore({
       state: filterByCostState,
       actions,
@@ -188,5 +188,42 @@ describe('Vuex Actions', () => {
     );
 
     expect(dispatch).toHaveBeenCalledOnce();
+  });
+
+  it('FETCH_UNIT_BY_ID action should set unit detail correctly', () => {
+    const fetchUnitByIdState = {
+      ...state,
+      units: {
+        All: mockedUnits,
+        Castle: null,
+        Dark: null,
+        Feudal: null,
+        Imperial: null
+      },
+      selectedOption: UnitAgeEnum.All
+    };
+
+    const unitId = 1;
+
+    createStore({
+      state: fetchUnitByIdState,
+      actions,
+      mutations,
+      getters
+    });
+
+    actions[ActionTypes.FETCH_UNIT_BY_ID](
+      {
+        state: fetchUnitByIdState,
+        commit,
+        dispatch,
+        getters,
+        rootGetters: getters,
+        rootState: fetchUnitByIdState
+      },
+      unitId
+    );
+
+    expect(commit).toHaveBeenCalledWith(MutationTypes.SET_UNIT_DETAIL, mockedUnits[0]);
   });
 });
