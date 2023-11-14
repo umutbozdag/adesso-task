@@ -1,4 +1,7 @@
-## Create a `.env` file at the root directory and please set VITE_LOCALHOST_URL=http://localhost:5173
+# IMPORTANT
+## Create an `.env` file at the root directory and please set VITE_LOCALHOST_URL=http://localhost:5173 (or whatever that your localhost is)
+## To run coverage: `npm run test:unit:coverage`
+## To update snapshots: `npm run test:unit:u`
 
 This template should help get you started developing with Vue 3 in Vite.
 
