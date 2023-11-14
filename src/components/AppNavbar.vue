@@ -11,7 +11,7 @@
           <li class="navbar__item" v-if="route.showInNavbar">
             <router-link
               :to="{ name: route.name }"
-              class="navbar__link rounded md:bg-transparent md:p-0 px-3 text-white"
+              class="navbar__link rounded md:bg-transparent px-2 py-1 text-white"
               >{{ route.label }}</router-link
             >
           </li>
@@ -31,5 +31,10 @@ import routes from '@/config/routes';
     color: $color-beige;
     transition: 0.2s ease;
   }
+}
+
+.router-link-exact-active {
+  background-color: $active-route-bg;
+  color: $color-beige;
 }
 </style>
