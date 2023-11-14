@@ -41,4 +41,10 @@ describe('Vuex Mutations', () => {
     store.commit(MutationTypes.SET_UNIT_DETAIL, unit);
     expect(store.state.unitDetail).toEqual(unit);
   });
+
+  it('RESET_COST_FILTERS mutation sets costsFilters correctly', () => {
+    store.state.costsFilters.food.selected = true;
+    store.commit(MutationTypes.RESET_COST_FILTERS);
+    expect(store.state.costsFilters.food.selected).toEqual(false);
+  });
 });
