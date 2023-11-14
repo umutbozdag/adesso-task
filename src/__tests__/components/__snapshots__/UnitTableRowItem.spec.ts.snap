@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`UnitTableRowItem > renders correctly 1`] = `
+"<tr class=\\"border-b bg-gray-800 border-gray-700 text-gray-300 cursor-pointer hover:bg-gray-700 table__row--even\\">
+  <td scope=\\"row\\" class=\\"px-6 py-4 font-medium whitespace-nowrap\\">1</td>
+  <td class=\\"px-6 py-4\\">Archer</td>
+  <td class=\\"px-6 py-4\\">Dark</td>
+  <td class=\\"px-6 py-4\\"><span>Wood: 25, </span><span>Gold: 45<!--v-if--></span></td>
+</tr>"
+`;
