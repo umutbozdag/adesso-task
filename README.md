@@ -1,5 +1,5 @@
 # IMPORTANT
-## Create a `.env` file at the root directory and please set VITE_LOCALHOST_URL=http://localhost:5173
+## Create a `.env` file at the root directory and please set VITE_LOCALHOST_URL=http://localhost:5173 (or whatever that your localhost)
 ## To run coverage: `npm run test:unit:coverage`
 ## To update snapshost: `npm run test:unit:u`
 
