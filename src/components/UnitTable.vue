@@ -17,7 +17,7 @@
             :key="unit.id"
             :row-index="idx"
             :unit-detail="unit"
-            @row-click="handleRowClick"
+            @row-clicked="handleRowClick"
           />
         </tbody>
       </table>

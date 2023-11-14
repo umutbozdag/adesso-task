@@ -14,9 +14,6 @@ exports[`UnitTable > renders correctly 1`] = `
       </thead>
       <tbody data-v-b7cca949=\\"\\" class=\\"unit-table__rows h-96\\">
         <tr data-v-b7cca949=\\"\\" class=\\"border-b bg-gray-800 border-gray-700 text-gray-300 cursor-pointer hover:bg-gray-700 table__row--even\\">
-          <!-- TODO: get 'id' from header and render based on that -->
-          <!-- OR -->
-          <!-- TODO: use 'label' props to pass data and use a slot for more advanced things (rendering costs array) -->
           <td scope=\\"row\\" class=\\"px-6 py-4 font-medium whitespace-nowrap\\">1</td>
           <td class=\\"px-6 py-4\\">Archer</td>
           <td class=\\"px-6 py-4\\">Dark</td>
