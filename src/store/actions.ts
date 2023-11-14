@@ -1,6 +1,6 @@
 import { ActionTree } from 'vuex';
 import Actions, { ActionTypes } from '@/types/store/Actions';
-import RootState from '@/types/store/State';
+import RootState, { StoreUnitsWithoutNull } from '@/types/store/State';
 import { MutationTypes } from '@/types/store/Mutations';
 import { IUnits, UnitAgeEnum } from '@/types/Unit';
 import UnitDto from '@/dto/UnitDTO';
@@ -34,12 +34,11 @@ const actions: ActionTree<RootState, RootState> & Actions = {
       return;
     }
 
-    // TODO: Add type for Record<UnitAgeEnum, IUnitDTO[]>
     // If it's not filtered before
     if (!state.units[age]) {
-      const filteredUnitsByAge = (state.units as Record<UnitAgeEnum, IUnitDTO[]>)[
-        UnitAgeEnum.All
-      ].filter((unit) => unit.age === age);
+      const filteredUnitsByAge = (state.units as StoreUnitsWithoutNull)[UnitAgeEnum.All].filter(
+        (unit) => unit.age === age
+      );
       commit(MutationTypes.SET_UNITS, {
         units: filteredUnitsByAge,
         key: age

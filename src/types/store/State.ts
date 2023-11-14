@@ -1,8 +1,9 @@
-import { UnitAgeEnum } from '../Unit';
-import { CostFilterConfigType } from '../UnitTableFilter';
-import { IUnitDTO } from '../dto/UnitDTO';
+import { UnitAgeEnum } from '@/types/Unit';
+import { CostFilterConfigType } from '@/types/UnitTableFilter';
+import { IUnitDTO } from '@/types/dto/UnitDTO';
 
 export type StoreUnits = Record<UnitAgeEnum, IUnitDTO[] | null>;
+export type StoreUnitsWithoutNull = Record<UnitAgeEnum, IUnitDTO[]>;
 
 interface RootState {
   selectedOption: UnitAgeEnum;
