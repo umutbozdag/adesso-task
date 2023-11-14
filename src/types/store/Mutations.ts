@@ -1,6 +1,6 @@
 import RootState from '@/types/store/State';
 import { UnitAgeEnum } from '@/types/Unit';
-import { IUnitDTO } from '../dto/UnitDTO';
+import { IUnitDTO } from '@/types/dto/UnitDTO';
 
 export enum MutationTypes {
   SET_SELECTED_OPTION = 'setSelectedOption',

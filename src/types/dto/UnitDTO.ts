@@ -1,4 +1,4 @@
-import type { IUnitCost, UnitAgeType, UnitExpansionType, UnitRangeType } from '../Unit';
+import type { IUnitCost, UnitAgeType, UnitExpansionType, UnitRangeType } from '@/types/Unit';
 
 export interface IUnitDTO {
   id: number;

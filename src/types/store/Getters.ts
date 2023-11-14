@@ -1,6 +1,6 @@
 import RootState, { StoreUnits } from '@/types/store/State';
-import { IUnitDTO } from '../dto/UnitDTO';
-import { FilterDropdownOption } from '../FilterDropdown';
+import { IUnitDTO } from '@/types/dto/UnitDTO';
+import { FilterDropdownOption } from '@/types/FilterDropdown';
 
 export enum GetterTypes {
   UNITS = 'units',

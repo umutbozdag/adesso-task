@@ -1,8 +1,8 @@
 import { ActionContext } from 'vuex';
 import RootState from '@/types/store/State';
-import { UnitAgeEnum } from '../Unit';
-import { CostFilterConfigType } from '../UnitTableFilter';
-import { IUnitDTO } from '../dto/UnitDTO';
+import { UnitAgeEnum } from '@/types/Unit';
+import { CostFilterConfigType } from '@/types/UnitTableFilter';
+import { IUnitDTO } from '@/types/dto/UnitDTO';
 
 export enum ActionTypes {
   FETCH_UNITS = 'fetchUnits',
